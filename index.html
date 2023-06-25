@@ -16,84 +16,93 @@
 
 <body>
 
-    <ul class="nav justify-content-center mt-5">
-        <!-- bài 1: tính tiền lương nhân viên, lương 1 ngày : 100.000 vnd
-       cho người dùng nhập vào số ngày làm
-       Công thưc tính lương: lương 1 ngày * số ngày làm -->
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Exercise 1</a>
-            <form onsubmit="return false;">
-                <div class="mb-3">
-                    <h3>Tính tiền lương của nhân viên</h3>
-                    <label for="" class="form-label">Số ngày làm việc </label>
-                    <input type="number" class="form-control" name="" id="day" aria-describedby="helpId" placeholder="">
 
+    <div class="container">
+        <h1 class="text-success text-center">BÀI TẬP JS BUỔI 2 - 3</h1>
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-bai-1-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-bai-1" type="button" role="tab" aria-controls="v-pills-bai-1"
+                    aria-selected="true">bai-1</button>
+                <button class="nav-link" id="v-pills-bai-2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bai-2"
+                    type="button" role="tab" aria-controls="v-pills-bai-2" aria-selected="false">bai-2</button>
+                <button class="nav-link" id="v-pills-bai-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bai-3"
+                    type="button" role="tab" aria-controls="v-pills-bai-3" aria-selected="false">bai-3</button>
+                <button class="nav-link" id="v-pills-bai-4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bai-4"
+                    type="button" role="tab" aria-controls="v-pills-bai-4" aria-selected="false">bai-4</button>
+                <button class="nav-link" id="v-pills-bai-5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bai-5"
+                    type="button" role="tab" aria-controls="v-pills-bai-5" aria-selected="false">bai-5</button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <!-- bài 1 -->
+                <div class="tab-pane fade show active" id="v-pills-bai-1" role="tabpanel"
+                    aria-labelledby="v-pills-bai-1-tab">
+                    <form onsubmit="return false;">
+                        <div class="mb-3">
+                            <h3>Tính tiền lương của nhân viên</h3>
+                            <label for="" class="form-label">Số ngày làm việc </label>
+                            <input type="number" class="form-control" name="" id="day" aria-describedby="helpId"
+                                placeholder="">
+
+                        </div>
+                        <div>
+                            <button class="btn btn-success p-3" id="salary">Submit</button>
+                        </div>
+                        <p class=" bg-warning mt-3 p-2">Kết quả : <span id="result-1" class="text-success "></span></p>
+                    </form>
                 </div>
-                <div>
-                    <button class="btn btn-danger p-3" id="salary">Tính lương</button>
+                <!-- bài 2 -->
+                <div class="tab-pane fade" id="v-pills-bai-2" role="tabpanel" aria-labelledby="v-pills-bai-2-tab">
+                    <h3>tính giá trị trung bình</h3>
+                    <p>Nhập vào 5 số thực</p>
+                    <input type="text " id="number1"> <br>
+                    <input type="text " id="number2"><br>
+                    <input type="text " id="number3"><br>
+                    <input type="text " id="number4"><br>
+                    <input type="text " id="number5">
+                    <div>
+                        <button class="btn btn-success p-3 mt-3" id="calculateAverage">Submit</button>
+                    </div>
+                    <p class=" bg-warning mt-3 p-2">Kết quả : <span id="result-2" class="text-success "></span></p>
                 </div>
-                <p id="result" class="btn btn-dark mt-3 p-2">Kết quả</p>
-            </form>
-        </li>
-        <!-- bài tập 2: -->
-        <li class="nav-item">
-            <a class="nav-link" href="#">Exercise 2</a>
-            <h3>tính giá trị trung bình</h3>
-            <p>Nhập vào 5 số thực</p>
-            <input type="text " id="number1"> <br>
-            <input type="text " id="number2"><br>
-            <input type="text " id="number3"><br>
-            <input type="text " id="number4"><br>
-            <input type="text " id="number5">
-            <div>
-                <button class="btn btn-danger p-3 mt-3" id="calculateAverage">tính gía trị trung bình</button>
-            </div>
-            <p id="showResult" class="btn btn-dark mt-3 p-2">Kết qủa là</p>
+                <!-- bài 3 -->
+                <div class="tab-pane fade" id="v-pills-bai-3" role="tabpanel" aria-labelledby="v-pills-bai-3-tab">
+                    <div class="mb-3">
+                        <label for="" class="form-label h3">Nhập số tiền USD cần quy đổi:</label>
+                        <input type="number" class="form-control" name="" id="usdAmount" aria-describedby="helpId"
+                            placeholder="">
+                        <button class="btn btn-success p-3 mt-3" id="convertBtn">Submit</button>
+                        <p class=" bg-warning mt-3 p-2">Kết quả : <span id="result-3" class="text-success "></span></p>
+                    </div>
+                </div>
+                <!-- bài 4 -->
+                <div class="tab-pane fade" id="v-pills-bai-4" role="tabpanel" aria-labelledby="v-pills-bai-4-tab">
+                    <div class="mb-3">
+                        <label for="" class="form-label h3">Tính diện tích và chu vi hình chữ nhật</label>
+                        <input type="text" class="form-control" name="" id="chieudai" aria-describedby="helpId"
+                            placeholder="nhập chiều dài...">
+                        <input type="text" class="form-control" name="" id="chieurong" aria-describedby="helpId"
+                            placeholder=" nhập chiều rộng...">
+                        <button class="btn btn-success p-3 mt-3" id="chuVi">Chu vi</button>
+                        <button class="btn btn-success p-3 mt-3" id="dienTich">Diện tích</button>
+                        <p class="btn btn-warning mt-3 py-2" id="result-chuvi">Chu vi hình chữ nhật</p>
+                        <p class="btn btn-warning mt-3 py-2" id="result-dientich">Diện tích hình chữ nhật</p>
+                    </div>
+                </div>
+                <!-- bài 5 -->
+                <div class="tab-pane fade" id="v-pills-bai-5" role="tabpanel" aria-labelledby="v-pills-bai-5-tab">
+                    <div class="mb-3">
+                        <label for="" class="form-label h3">Tính tổng 2 ký số</label>
+                        <input type="text" class="form-control" name="" id="so-bai-5" aria-describedby="helpId"
+                            placeholder="nhập số  ...">
 
-        </li>
-        <!-- bai 3 -->
-        <li class="nav-item">
-            <a class="nav-link" href="#">Exercise 3 </a>
-            <div class="mb-3">
-                <label for="" class="form-label">Nhập số tiền USD cần quy đổi:</label>
-                <input type="number" class="form-control" name="" id="usdAmount" aria-describedby="helpId"
-                    placeholder="">
-                <button class="btn btn-danger p-3 mt-3" id="convertBtn">Quy đổi</button>
-                <p class="btn btn-dark mt-3 py-2" id="result-3">Kết qủa là</p>
+                    </div>
+                    <button class="btn btn-success p-3 mt-3" id="tongHaiSo">Submit</button>
+                    <p class=" bg-warning mt-3 p-2">Kết quả : <span id="result-5" class="text-success "></span></p>
+                </div>
             </div>
-
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Exercise 4</a>
-            <!-- bài tập 4 -->
-            <div class="mb-3">
-                <label for="" class="form-label">Tính diện tích và chu vi hình chữ nhật</label>
-                <input type="text" class="form-control" name="" id="chieudai" aria-describedby="helpId" placeholder="nhập chiều dài...">
-                <input type="text" class="form-control" name="" id="chieurong" aria-describedby="helpId" placeholder=" nhập chiều rộng...">
-                <button class="btn btn-danger p-3 mt-3" id="chuVi">Chu vi</button>
-                <button class="btn btn-danger p-3 mt-3" id="dienTich">Diện tích</button>
-                <p class="btn btn-dark mt-3 py-2" id="result-chuvi">Chu vi hình chữ nhật</p>
-                <p class="btn btn-dark mt-3 py-2" id="result-dientich">Diện tích hình chữ nhật</p>
-            </div>
-        </li>
-        <!-- bài tập 5: -->
-
-        <li class="nav-item">
-            <a class="nav-link" href="#">Exercise 5</a>
-    <div class="mb-3">
-      <label for="" class="form-label">Name</label>
-      <input type="text"
-        class="form-control" name="" id="soHangChuc" aria-describedby="helpId" placeholder="nhập số đầu tiên ...">
-        <input type="text" class="form-control" name="" id="soHangDonVi" aria-describedby="helpId" placeholder="nhập số thứ hai ...">
+        </div>
     </div>
-    <button class="btn btn-danger p-3 mt-3" id="tongHaiSo">Tổng hai kí số</button>
-    <p class="btn btn-dark mt-3 py-2" id="result-tongHaiSo"></p>
-        </li>
-    </ul>
-
-
-
-
 
 
     <!-- Bootstrap JavaScript Libraries -->
